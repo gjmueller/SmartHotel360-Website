@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "gjmaksdem-02fb"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "gjmaksdem-02fb"
+  template:
+    metadata:
+      labels:
+        app: "gjmaksdem-02fb"
+    spec:
+      containers:
+        - name: "gjmaksdem-02fb"
+          image: "gjmacr123.azurecr.io/gjmaksdem"
+          ports:
+          - containerPort: 80
